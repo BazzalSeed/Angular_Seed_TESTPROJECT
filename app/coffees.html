@@ -1,0 +1,75 @@
+
+<body >
+
+
+
+<br/>
+<h1>TEA IS BETTER</h1>
+<hr/>
+<label>Any <input ng-model="search.$"></label><br>
+<label>Name only <input ng-model="search.name"></label><br>
+<label>Brand only <input ng-model="search.brand"></label><br>
+<label>Country only <input ng-model="search.country"></label><br>
+
+
+
+
+<table class="table table-hover">
+	<tr>
+        <th>
+          Reviews
+        </th>
+		<th>Brand
+		</th>
+		<th>Name
+		</th>
+		<th>Contoury
+		</th>
+	</tr>
+
+	<tr ng-repeat= "c in coffees | filter:search"  >
+      <td>
+        <a ng-href="#/reviews/{{c.id}}">Reviews</a>
+      </td>
+		<td>
+            {{c.brand}}
+		</td>
+		<td>
+            {{c.name}}
+		</td>
+		<td>
+            {{c.country}}
+		</td>
+	</tr>
+</table>
+
+<div class="text-xs-center">
+
+  <img src="https://www.ncgreenpower.org/wp-content/uploads/2016/01/coffee-beans-759024_960_720.jpg" class="image-responsive"   height="400" >
+</div>
+
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+
+
+
+
